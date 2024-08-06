@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# Horrordle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Horrordle is a React-based application that allows users to search for horror movies using the TMDB API. The application provides an autocomplete feature for movie titles and displays relevant information about the selected movie.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search Movies**: Search for horror movies by title.
+- **Autocomplete**: Provides autocomplete suggestions as you type.
+- **Movie Details**: Displays details about the selected movie.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/yourusername/horrordle.git
+    cd horrordle
+    ```
 
-- Configure the top-level `parserOptions` property like this:
+2. **Install dependencies**:
+    ```sh
+    npm install
+    ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. **Set up API Key**:
+    - Obtain an API key from [The Movie Database (TMDB)](https://www.themoviedb.org/documentation/api).
+    - Create a `.env` file in the root directory and add your API key:
+      ```env
+      REACT_APP_TMDB_API_KEY=your_api_key_here
+      ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. **Start the development server**:
+    ```sh
+    npm start
+    ```
+
+## Usage
+
+- Open your browser and navigate to `http://localhost:3000`.
+- Start typing a movie title in the search bar to see autocomplete suggestions.
+- Click on a movie title to see more details about the movie.
+
+## Dependencies
+
+- **React**: A JavaScript library for building user interfaces.
+- **Material-UI (MUI)**: A popular React UI framework.
+- **TMDB API**: The Movie Database API for fetching movie data.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgements
+
+- [The Movie Database (TMDB)](https://www.themoviedb.org/) for providing the movie data API.
+- [Material-UI (MUI)](https://mui.com/) for the UI components.
